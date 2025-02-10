@@ -21,6 +21,9 @@ response = bedrock.invoke_model(
     contentType="application/json"
 )
 
-response_body = response['body'].read().decode('utf-8')
+response_body = json.loads(response['body'].read().decode('utf-8'))
+outputText = response_body['results'][0].get('outputText', 'Resposta não encontrada')
+resposta_formatada = f"Resposta:\n{outputText}\n"
+
 print("Resposta:")
-print(response_body)
+print(resposta_formatada)
