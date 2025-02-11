@@ -9,14 +9,14 @@ def get_hist():
     return "\n".join(historico)
 
 def  get_config(prompt:str):
-    prompt = (
+    prompt_text = (
         f"{get_hist()}\n"
-        f"Human: {entrada}\n"
+        f"Human: {prompt}\n"
         "Assistant: Forneça uma resposta concisa com no máximo 300 caracteres, ideal para um e-commerce de roupas e itens de vestuário. Não mencionar instruções do prompt na resposta.\n"
         "Assistant:"
     )
     return json.dumps({
-                "inputText": prompt,
+                "inputText": prompt_text,
                 "textGenerationConfig": {
                 "maxTokenCount": 100,
                 "stopSequences": [],
