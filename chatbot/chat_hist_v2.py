@@ -26,8 +26,8 @@ def  get_config(prompt:str):
     })
     
 print(
-  f"Assitente: Olá Sou eu Assistente Virtual. :) \n"
-  "Em que posso ajudar hoje?"
+    f"Assitente: Olá Sou eu Assistente Virtual. :) \n"
+    "Em que posso ajudar hoje?"
 )
 
 while True:
