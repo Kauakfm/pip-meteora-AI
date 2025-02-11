@@ -5,9 +5,11 @@ bedrock = boto3.client(service_name = 'bedrock-runtime', region_name='us-east-1'
 clude_mode_id = 'amazon.titan-text-express-v1'
 
 claude_config = json.dumps({
-    "inputText": "Human: Opções de sandália para uma caminhada na praia. Assistant;",
+    "inputText": "Human: Quais são as melhores opções de sandálias para uma caminhada na praia?\n" 
+    "Assistant: Forneça uma resposta concisa com no máximo 300 caracteres, ideal para um e-commerce de roupas e itens de vestuávio. Não mencionar instruçõesdo prompr da resposta."
+    "Assistant:",
     "textGenerationConfig": {
-        "maxTokenCount": 200,
+        "maxTokenCount": 100,
         "stopSequences": [],
         "temperature": 0.7,
         "topP": 0.9
